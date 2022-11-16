@@ -1,21 +1,9 @@
-# From base image node
-FROM node:16
+FROM python:3.8-slim-buster
 
-# Create app directory
-RUN mkdir -p /usr/src/app
-WORKDIR /usr/src/app
+WORKDIR /app
 
-# Copying all the files from your file system to container file system
-COPY package.json .
+COPY . .
 
-# Install all dependencies
-RUN npm install
+RUN pip3 install -r requirements.txt
 
-# Copy other files too
-COPY ./ .
-
-# Expose the port
-EXPOSE 3030
-
-# Command to run app when intantiate an image
-CMD ["npm","start"]
+CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0"]
