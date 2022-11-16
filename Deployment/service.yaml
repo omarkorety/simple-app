@@ -7,9 +7,9 @@ metadata:
 spec:
   ports:
   - name: simpleapp-port
-    port: 50001
+    port: 5000
     protocol: TCP
-    targetPort: 50001
+    targetPort: 5000
   selector:
     app: simpleapp
   type: LoadBalancer
