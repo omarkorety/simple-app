@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: movieapp
+  name: movieapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: movieapp
+  template:
+    metadata:
+      labels:
+        app: movieapp
+    spec:
+      containers:
+      - image: omarkorety/movieapp:V${BUILD_NUMBER}
+        name: movieapp
+#         imagePullPolicy: Always
+        ports:
+        - containerPort: 50001
+        resources: {}
