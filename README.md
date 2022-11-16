@@ -11,3 +11,5 @@ Building and deploying an application using Jenkins CI/CD
 #### create deployment from our Docoratize application 
   
  
+Dockerhub jenkins image repository: https://hub.docker.com/repository/docker/omarkorety/simpleapp
+
