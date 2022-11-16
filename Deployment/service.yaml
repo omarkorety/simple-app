@@ -2,16 +2,16 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    app: movieapp-service
-  name: movieapp-service
+    app: simpleapp-service
+  name: simpleapp-service
 spec:
   ports:
-  - name: movieapp-port
+  - name: simpleapp-port
     port: 50001
     protocol: TCP
     targetPort: 50001
   selector:
-    app: movieapp
+    app: simpleapp
   type: LoadBalancer
 status:
   loadBalancer: {}

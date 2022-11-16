@@ -2,21 +2,21 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: movieapp
-  name: movieapp
+    app: simpleapp
+  name: simpleapp
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: movieapp
+      app: simpleapp
   template:
     metadata:
       labels:
-        app: movieapp
+        app: simpleapp
     spec:
       containers:
-      - image: omarkorety/movieapp:V${BUILD_NUMBER}
-        name: movieapp
+      - image: omarkorety/simpleapp:V${BUILD_NUMBER}
+        name: simpleapp
 #         imagePullPolicy: Always
         ports:
         - containerPort: 50001
