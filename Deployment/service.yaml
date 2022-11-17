@@ -4,6 +4,7 @@ metadata:
   labels:
     app: simpleapp-service
   name: simpleapp-service
+  namespace: myapp
 spec:
   ports:
   - name: simpleapp-port
